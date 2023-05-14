@@ -1,0 +1,721 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+#viewDiv {
+    height: 40%;
+    width: 40%;
+  }
+
+body{
+    margin: 0;
+}
+    
+
+/**************************Botón de wathsapp*********************************************/
+.btn-wsp{
+    position:fixed;
+    width:70px;
+    height:70px;
+    line-height: 70px;
+    bottom:25px;
+    right:25px;
+    background:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:40px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index:100;
+    transition: all 300ms ease;
+}
+.btn-wsp:hover{
+    background: #20ba5a;
+}
+/****************************************************************************/
+header{
+    background-color: rgb(245,245,245);
+    position: absolute; z-index: 1;    
+}
+
+.marca > img{
+    margin-top: 1%;
+    width: 105px;
+    height: 105px;
+    
+}
+
+header .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 5%;
+    padding-bottom: 10px;
+    font-size: 17px;
+}
+
+#nave{
+    padding: 6px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+#nave:hover{
+    color: #3E89EB;
+}
+
+header a:hover{
+    color: #3E89EB;
+}
+/****************************************************Redes banner***************************/
+.container-bar{
+	width: 100%;
+	max-width: 50px;
+	position: fixed;
+	left: 0;
+	top: 25%;
+}
+.container-bar a{
+	display: block;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 18px;
+	position: relative;
+	transition: all 500ms ease;
+	color: #fff;
+}
+.container-bar a:hover{
+	background: #1c1c1c;
+}
+.container-bar .fa-facebook{
+	background: #3b5998;
+	border-radius: 0px 5px 0px 0px;
+}
+.container-bar .fa-youtube{
+	background: #e52a23;
+}
+.container-bar .fa-tiktok{
+	background: #000000;
+}
+.container-bar .fa-instagram{
+	background: #E1306C;
+}
+
+.container-bar #title{
+	position: absolute;
+	background: #1c1c1c;
+	padding: 0px 8px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 3px;
+	font-size: 15px;
+	top:12px; left: 0px;
+	transition: all 500ms ease;
+	opacity: 0;
+	visibility: hidden;
+	z-index: -1;
+}
+.container-bar a:hover #title{
+	opacity: 1;
+	visibility: visible;
+	left: 64px;
+}
+.container-bar #title:after{
+	position: absolute;
+	content: '';
+	border-left: 7px solid transparent;
+	border-right: 6px solid #1c1c1c;
+	border-top: 7px solid transparent;
+	border-bottom: 7px solid transparent;
+	right: 100%;
+	top: 8px;
+}
+#btn-social{
+	display: none;
+}
+.fa-play{
+	cursor: pointer;
+	transition: all 0.4s;
+	font-size: 18px;
+	margin-bottom: 5px;
+	display: inline-block;
+	transform: rotate(180deg);
+	color: #3E89EB;
+}
+#btn-social:checked ~ .fa-play{
+	transform: rotate(0deg);
+}
+.icon-social{
+	transition: all 0.4s;
+	transform: translateX(0%);
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+}
+#btn-social:checked ~ .icon-social{
+	transform: translateX(-100%);
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.0);
+}
+/*************************************Hero***************************************************/
+.logo{
+    display: inline-block;
+    margin: 0;
+    padding: auto;
+    color: #EB17A4;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("../assets/img/portada.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#hero h1{
+    color: white;
+}
+#hero button{
+    font-size: 1.75em;
+}
+.button{
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white;
+    background-color: #3E89EB;
+    text-decoration: none;
+}
+
+.button:hover{
+    background-color: #3E89EB;
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+.color-acento{ color:#EB17A4; }
+/*******************************Carrusel card*******************************************************/
+.img-wrapper{
+    max-width: 100%;
+    height: 65vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+img{
+    max-width: 40%;
+    max-height: 40%;
+}
+
+.carousel-inner{
+    padding: 1em;
+}
+.card{
+    margin: 0 .5em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+    flex-wrap: wrap;
+}
+.carousel-control-prev, .carousel-control-next{
+    background-color: #000000;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute; z-index: 0; /*Esto ayuda a dar la posición que uno quiere que se fije de primeras o segundas*/
+}
+h2{
+    padding-top: 1%;
+    padding-left: 35%;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    justify-content: center;
+    align-items: center;
+}
+strong{
+    color: #EB17A4;
+}
+/************************************Categorias*************************************************************************/
+#categorias{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#categorias2{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.img-back{
+    background-image: url("../assets/img/sabraDios.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    padding-top: 110px;
+    border-radius: 180px;
+    color: #FFF;
+
+}
+.btn{
+    background-color: #3E89EB;
+    border: 0;
+    padding: 1px;
+    font-size: 17px;
+}
+.img-back1{
+    background-image: url("../assets/img/desayuno\ saludable.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    padding-top: 110px;
+    border-radius: 180px;
+    color: #FFF;
+}
+.img-back2{
+    background-image: url("../assets/img/desayuno.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    padding-top: 110px;
+    border-radius: 180px;
+    color: #FFF;
+}
+.img-back3{
+    background-image: url("../assets/img/detalles.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    padding-top: 110px;
+    border-radius: 180px;
+    color: #FFF;
+}
+.img-back4{
+    background-image: url("../assets/img/detalle\ niños.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    padding-top: 110px;
+    border-radius: 180px;
+    color: #FFF;
+}
+.img-back5{
+    background-image: url("../assets/img/flores.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    padding-top: 120px;
+    border-radius: 180px;
+    color: #FFF;
+}
+.img-back6{
+    background-image: url("../assets/img/ropa.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    padding-top: 120px;
+    border-radius: 180px;
+    color: #FFF;
+}
+.img-back7{
+    background-image: url("../assets/img/Articulos.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    padding-top: 120px;
+    border-radius: 180px;
+    color: #FFF;
+}
+.img-back8{
+    background-image: url("../assets/img/nosexd.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    padding-top: 120px;
+    border-radius: 180px;
+    color: #FFF;
+}
+/*****************Card Reseñas********************************************************/
+.card-deck{
+    width: 1200px;
+    height: 300px;
+    display: flex;
+    font-size: 16px;
+    font-size: 18px;
+    padding-left: 25%;
+    justify-content: center;
+    align-items: center;
+}
+.imagen{
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    border: 1px solid black;
+}
+.btn-primary{
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #FFF;
+    background-color: #3E89EB;
+    border: 0;
+    padding: 1px;
+    font-size: 18px;
+    border-radius: 4px;
+}
+
+/******************************************Footer*****************************************/
+footer{
+    text-align: center;
+    padding: 2%;
+}
+footer>a{
+    width: 2%;
+    padding: 1%;
+}
+
+#final {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(30, 30, 30);
+    color: white;
+    height: 80vh;
+}
+
+#final h2 {
+    font-size: 9vw;
+}
+
+#final button {
+    font-size: 5vw;
+}
+
+footer {
+    background-color: rgb(230, 230, 230);
+}
+
+footer p {
+    margin: 0;
+    padding: 12px;
+    color: rgb(100, 100, 100);
+}
+
+footer .container {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/***************************QUIENES SOMOSS***********************************************************************************/
+#hero2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("../assets/img/hero2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 790px;
+}
+#somos-desayunos .container{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 18px;
+    padding-left: 0%;
+    
+}
+
+#somos-desayunos .img-container{
+    background-image: url("../assets/img/clientes.jpeg");
+    background-size: cover;
+    background-position: center;
+    width: 800px;
+    height: 300px;
+    padding-left: 0%;
+}
+
+.texto{
+    padding-top:6% ;
+    padding-left: 2%;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+/**********************Reseñas Quienes somos***********************************************************************/
+.testimonios-contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.testimonio-caja{   
+    width: 500px;
+    box-shadow: 1px 1px 10px black;
+    background-color: white;
+    padding:20px;
+    margin: 15px;
+    cursor: pointer;
+    justify-content: space-between;
+}
+
+.perfil{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow:hidden;
+    margin-right: 30px;
+}
+.perfil img{
+    width: 100%;
+    height: 100%;
+    object-fit: center;
+}
+.caja-top{
+    display: flex;
+    align-items: center;
+}
+.name-user strong{
+    color: #000000;
+}
+.reseñas{
+    padding-left: 17%;
+
+}
+
+/************************************Contacto*********************************************/
+.contactanos{
+    padding-top: 8%;
+    justify-content: center;
+    text-align: justify;    
+    background-size: 50% 20px;
+    display: flex;
+    margin-bottom: 30px;
+}
+.datos{
+    padding-top: 10px;
+    padding-right: 10px;
+    font-size: 18px;
+}
+.mapa{
+    width:700px;
+    height:500px;
+    border:1px solid black;
+    
+}
+/**************************************Como comprar*********************************/
+.como{
+    padding-top: 7%;
+    justify-content: center;
+    margin-left: 4%;
+    font-size: 20px;
+}
+#metodos{
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    margin-left: 3%;
+    padding-top: 1%;
+}
+.pago{
+    display: flex;
+    justify-content: center;
+}
+.metodo{
+    width: 100px;
+    height: 90px;
+}
+.metodox{
+    height: 90px;
+    width: 150px;
+}
+.metodoc{
+    padding-left: 130px;
+    height: 100px;
+    width: 270px;
+}
+.metodoz{
+    padding-left: 70px;
+    width: 170px;
+    height: 90px;  
+}
+#dato{
+    justify-content: center;
+}
+.import{
+    padding-left: 2%;
+    color: #3E89EB;
+}
+/******************************************************************************************/
+@media (max-width: 1200px){
+    
+    .como{
+        padding-top: 8%;
+    }
+    #metodos{
+        font-size: 17px;
+    }
+    .metodo{
+        width: 80px;
+        height: 80px;
+    }
+    .metodox{
+        height: 80px;
+        width: 100px;
+    }
+    .metodoc{
+        padding-left: 1px;
+        height: 90px;
+        width: 90px;
+    }
+    .metodoz{
+        padding-left: 70px;
+        width: 170px;
+        height: 90px;  
+    }
+    .card-deck{
+        padding-left: 1%;
+    }
+    .informacion{
+        margin-top: 4%;
+        padding-top:70%;
+    }
+    .datos{
+        font-size: 10px;
+    }
+    .cuadro{
+        padding-top: 5%;
+    }
+    .informacion{
+        padding-top: 5%;
+    }
+    .mapa{
+        width: 600px;
+        height: 400px;
+    }
+}
+@media (max-width: 1000px){
+    .card{
+        width: 20px;
+        height: 30px;
+        padding-left: 5%;
+
+    }
+}
+@media (min-width: 850px){
+
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .carousel-inner {
+        display: flex;
+    }
+    .carousel-item {
+        display: block;
+        margin-right: 0;
+        flex: 0 0 calc(100%/3);
+    }
+    .img-wrapper{
+        align-items: center;
+        height: 350px;
+        width: 570px;
+    }
+    img{
+        align-items: center;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+}
+
+/*@media (min-width: 672px){
+    
+    .img-wrapper{
+        padding: 0%;
+        margin: 0%;
+        align-items: center;
+        height: 600px;
+        width: 600px;
+    } 
+}*/
